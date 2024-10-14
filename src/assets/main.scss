@@ -1,0 +1,119 @@
+@import './sass/variables';
+@import './sass/mixins';
+@import './sass/content';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inter, sans-serif;
+}
+#app {
+  background-color: $primarybgColor;
+}
+
+.container {
+  height: 100vh;
+  background-color: $primarybgColor;
+  display: flex;
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 1.5rem;
+    border-bottom: 1px solid #0000001a;
+
+    h1 {
+      font-size: 1.25rem;
+    }
+
+    span {
+      display: none;
+      @include mQ($desktop) {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  main {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0 1rem;
+    flex-grow: 1;
+    overflow: scroll;
+    @include mQ($desktop) {
+      padding-inline: 2rem;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  @include mQ($desktop) {
+    display: block;
+  }
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 15px;
+  top: 16px;
+  // margin: 1rem;
+  @include mQ($desktop) {
+    display: none;
+  }
+}
+.mobile-menu {
+  position: relative;
+  @include mQ($desktop) {
+    display: none;
+  }
+}
+.mobile-menu__cancel {
+  position: absolute;
+  right: 30px;
+  top: 5px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 100px;
+
+  div.bar {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    transition: width 0.5s;
+    border-radius: 100px;
+    // z-index: -9;
+  }
+}
+
+.orange {
+  background-color: rgba(255, 64, 128, 0.1);
+
+  .bar {
+    background: $progressBarOrange;
+  }
+}
+.green {
+  background-color: rgba(47, 234, 155, 0.1);
+
+  .bar {
+    background: $progreeBarGreen;
+  }
+}
+
+*::webkit-scrollbar {
+  display: none;
+}

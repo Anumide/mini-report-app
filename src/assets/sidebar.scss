@@ -1,0 +1,67 @@
+@import './sass/variables';
+
+.sidebar-wrapper {
+  height: 100vh;
+  width: 250px;
+  padding: 2rem 1rem;
+  background-color: $primaryWhite;
+  border-radius: 0 20px 20px 0;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  ul {
+    list-style-type: none;
+    margin: 2rem auto;
+  }
+}
+
+.sidebar-link {
+  a {
+    display: flex;
+    padding: 15px 10px;
+    align-items: center;
+    gap: 0.5em;
+    border-radius: 10px;
+    color: $cardTitleColor;
+    text-decoration: none;
+    transition:
+      background-color 0.2s,
+      color 0.2s;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.sidebar-link a:hover {
+  background-color: $sidebarHoverBgColor;
+  color: $sidebarHoverColor;
+}
+
+.support {
+  margin: 2rem 0;
+  p {
+    font-size: 0.875rem;
+    color: $cardTitleColor;
+  }
+}
+
+.admin {
+  padding: 2rem 0 0;
+  border-top: 1px solid #e5e5e5;
+  img {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  small {
+    font-size: 0.75rem;
+    color: $cardTitleColor;
+  }
+}
