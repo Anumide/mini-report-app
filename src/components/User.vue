@@ -1,7 +1,7 @@
 <template>
   <div class="users">
     <div v-if="profile" class="profile">
-      <img :src="imageSrc" :alt="name" />
+      <img :src="getImageUrl" :alt="name" />
     </div>
     <div class="profile-details">
       <div>
@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   profile: {
     type: Boolean,
     required: false,
@@ -45,15 +45,18 @@ defineProps({
     required: false
   },
   imageSrc: {
-    type: String,
-    required: false
+    type: [String, URL],
+    required: false,
+    default: ''
   },
   number: {
-    type: Number || String,
+    type: [Number, String],
     required: true
   }
 
 })
+
+const getImageUrl = new URL(props.imageSrc, import.meta.url).href
 </script>
 
 <style scoped></style>
