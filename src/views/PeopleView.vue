@@ -5,13 +5,13 @@
       <CardComponent card-title="List of people">
         <User name="Jesse Thomas" :showMetric="false" number="Admin" image-src="/public/images/Lady.png" />
         <User name="Thisal Mathiyazhagan" :showMetric="false" number="Admin" :downward="true"
-          image-src="/public/images/Thomas2.png" />
-        <User name="Helen Chuang" :showMetric="false" number="Staff" image-src="/public/images/Lady2.png" />
-        <User name="Lura Silverman" :showMetric="false" number="Staff" image-src="/public/images/Thomas.png" />
-        <User name="Helen Vivien" :showMetric="false" number="Staff" image-src="/public/images/Lady.png" />
-        <User name="Hang Dan" :showMetric="false" number="Staff" image-src="/public/images/Thomas.png" />
-        <User name="Fowler Sing" :showMetric="false" number="Staff" image-src="/public/images/Lady2.png" />
-        <User name="Lulu King" :showMetric="false" number="Staff" image-src="/public/images/Thomas.png" />
+          image-src="../assets/images/Thomas2.png" />
+        <User name="Helen Chuang" :showMetric="false" number="Staff" image-src="../assets/images/Lady2.png" />
+        <User name="Lura Silverman" :showMetric="false" number="Staff" image-src="../assets/images/Thomas.png" />
+        <User name="Helen Vivien" :showMetric="false" number="Staff" image-src="../assets/images/Lady.png" />
+        <User name="Hang Dan" :showMetric="false" number="Staff" image-src="../assets/images/Thomas.png" />
+        <User name="Fowler Sing" :showMetric="false" number="Staff" image-src="../assets/images/Lady2.png" />
+        <User name="Lulu King" :showMetric="false" number="Staff" image-src="../assets/images/Thomas.png" />
       </CardComponent>
     </div>
   </main>
